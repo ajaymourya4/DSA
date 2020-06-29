@@ -13,6 +13,10 @@ public class LinearSearch {
     public static void main(String[] args) {
         LinearSearch search = new LinearSearch();
         int[] array = {4, 9, 12, 8, 1, 0, 2};
-        System.out.println("1 found at position " + (search.LinearSearch(array, 1) + 1));
+        int result = search.LinearSearch(array, 1);
+        if (result == -1)
+            System.out.println("Not found");
+        else
+            System.out.println("Element found at index " + result);
     }
 }
