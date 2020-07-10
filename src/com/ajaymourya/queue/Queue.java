@@ -1,4 +1,4 @@
-package com.ajaymourya;
+package com.ajaymourya.queue;
 
 public class Queue {
 
