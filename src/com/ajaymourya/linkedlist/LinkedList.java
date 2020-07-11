@@ -1,16 +1,16 @@
-package com.ajaymourya;
-
-class Node {
-    int data;
-    Node next;
-
-    Node(int data) {
-        this.data = data;
-        next = null;
-    }
-}
+package com.ajaymourya.linkedlist;
 
 public class LinkedList {
+
+    static class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            next = null;
+        }
+    }
 
     Node head;
 

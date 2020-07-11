@@ -1,4 +1,4 @@
-package com.ajaymourya;
+package com.ajaymourya.linkedlist;
 
 public class CircularSinglyLinkedList {
 
