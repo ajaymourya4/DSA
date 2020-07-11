@@ -66,12 +66,18 @@ public class DoublyLinkedList {
             System.out.println("List is empty");
             return;
         }
-        Node current = head;
+        if (head.data == data) {
+            head = head.next;
+            head.prev = null;
+            return;
+        }
+        Node current = head.next;
         while (current != null) {
             if (current.data == data) {
-                current.prev.next = current.next;
-                current.next.prev = current.prev;
-                return;
+                if (current.prev != null)
+                    current.prev.next = current.next;
+                if (current.next != null)
+                    current.next.prev = current.prev;
             }
             current = current.next;
         }
@@ -103,6 +109,8 @@ public class DoublyLinkedList {
         doublyLinkedList.insertAfter(7, 12);
         doublyLinkedList.display();
         doublyLinkedList.delete(7);
+        doublyLinkedList.display();
+        doublyLinkedList.delete(5);
         doublyLinkedList.display();
     }
 }
