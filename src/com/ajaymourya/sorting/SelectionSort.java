@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SelectionSort {
 
-    public void selectionSort(int[] array) {
+    static void selectionSort(int[] array) {
         int size = array.length;
         for (int i = 0; i < size - 1; i++) {
             int minIndex = i;
@@ -20,8 +20,7 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] data = {-2, 45, 0, 11, -9};
-        BubbleSort sort = new BubbleSort();
-        sort.bubbleSort(data);
+        selectionSort(data);
         System.out.println("Sorted list");
         System.out.println(Arrays.toString(data));
     }

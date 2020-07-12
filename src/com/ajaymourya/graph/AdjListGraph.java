@@ -1,4 +1,4 @@
-package com.ajaymourya;
+package com.ajaymourya.graph;
 
 import java.util.ArrayList;
 

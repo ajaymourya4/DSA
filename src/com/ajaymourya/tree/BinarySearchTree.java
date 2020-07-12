@@ -1,22 +1,22 @@
-package com.ajaymourya.binarysearchtree;
+package com.ajaymourya.tree;
 
-public class Node {
-    Node left, right;
+public class BinarySearchTree {
+    BinarySearchTree left, right;
     int data;
 
-    public Node(int data) {
+    public BinarySearchTree(int data) {
         this.data = data;
     }
 
     public void insert(int value) {
         if (value <= data) {
             if (left == null)
-                left = new Node(value);
+                left = new BinarySearchTree(value);
             else
                 left.insert(value);
         } else {
             if (right == null)
-                right = new Node(value);
+                right = new BinarySearchTree(value);
             else
                 right.insert(value);
         }
@@ -47,7 +47,7 @@ public class Node {
     }
 
     public static void main(String[] args) {
-        Node bst = new Node(5);
+        BinarySearchTree bst = new BinarySearchTree(5);
         bst.insert(2);
         bst.insert(8);
         bst.printInOrder();

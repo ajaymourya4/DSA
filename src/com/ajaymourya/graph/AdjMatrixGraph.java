@@ -1,4 +1,4 @@
-package com.ajaymourya;
+package com.ajaymourya.graph;
 
 public class AdjMatrixGraph {
     private int adjMatrix[][];

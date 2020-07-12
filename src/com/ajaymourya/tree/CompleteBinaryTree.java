@@ -1,4 +1,4 @@
-package com.ajaymourya;
+package com.ajaymourya.tree;
 
 public class CompleteBinaryTree {
 
