@@ -4,35 +4,30 @@ import java.util.Arrays;
 
 public class QuickSort {
 
-    private int partition(int[] array, int left, int right, int pivot) {
-        while (left <= right) {
-            while (array[left] < pivot) {
-                left++;
-            }
-            while (array[right] > pivot) {
-                right--;
-            }
-            if (left <= right) {
-                swap(array, left, right);
-                left++;
-                right--;
+    private int partition(int[] array, int low, int high) {
+        int pivot = array[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (array[j] <= pivot) {
+                i++;
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
             }
         }
-        return left;
+
+        int temp = array[i + 1];
+        array[i + 1] = array[high];
+        array[high] = temp;
+        return (i + 1);
     }
 
-    public void swap(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
-    public void quickSort(int[] array, int left, int right) {
-        if (left < right) {
-            int pivot = array[(left + right) / 2];
-            int index = partition(array, left, right, pivot);
-            quickSort(array, left, index - 1);
-            quickSort(array, index, right);
+    public void quickSort(int[] array, int low, int high) {
+        if (low < high) {
+            int p = partition(array, low, high);
+            quickSort(array, low, p - 1);
+            quickSort(array, p + 1, high);
         }
     }
 
