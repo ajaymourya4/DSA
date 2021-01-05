@@ -27,6 +27,7 @@ class Solution {
         }
     }
 
+    // Dutch National Flag Algorithm
     public void sortColors(int[] nums) {
         if (nums == null || nums.length == 0) {
             return;
